@@ -44,8 +44,10 @@ public class Solution {
          * this is the first missing positive number as the -ve flag for it is not set
          * in the modified, modified array because the number was simply not found while
          * setting number at index location to -ve in the previous step.
+         * 
+         * Here the range is from [1 till n], not from [0 till n]
          */
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i < n; i++) {
             if (nums[i] > 0) {
                 return i;
             }
